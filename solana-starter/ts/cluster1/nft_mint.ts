@@ -1,3 +1,5 @@
+// Mint Address: 5i4MoxqFjdEoTHHT729Sz4mcqgkkZn2mzBR1nvSXFVLB
+
 import { createUmi } from "@metaplex-foundation/umi-bundle-defaults"
 import { createSignerFromKeypair, signerIdentity, generateSigner, percentAmount } from "@metaplex-foundation/umi"
 import { createNft, mplTokenMetadata } from "@metaplex-foundation/mpl-token-metadata";
@@ -16,11 +18,17 @@ umi.use(mplTokenMetadata())
 const mint = generateSigner(umi);
 
 (async () => {
-    // let tx = ???
-    // let result = await tx.sendAndConfirm(umi);
-    // const signature = base58.encode(result.signature);
-    
-    // console.log(`Succesfully Minted! Check out your TX here:\nhttps://explorer.solana.com/tx/${signature}?cluster=devnet`)
+    let tx = createNft(umi, {
+        mint,
+        name: "Generug",
+        symbol: "RUG",
+        uri: "https://gateway.irys.xyz/EjZC44f8vTECVjLd5qaPjJKG6CPUbrZLryCzYEFN6cZJ",
+        sellerFeeBasisPoints: percentAmount(0),
+    });
+    let result = await tx.sendAndConfirm(umi);
+    const signature = base58.encode(result.signature);
+
+    console.log(`Succesfully Minted! Check out your TX here:\nhttps://explorer.solana.com/tx/${signature}?cluster=devnet`)
 
     console.log("Mint Address: ", mint.publicKey);
 })();
