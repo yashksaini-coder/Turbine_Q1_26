@@ -6,3 +6,6 @@
 
 ## NFT (Mint and Swap)
 ![NFT Mint and Swap](./screenshot/Gnurug.png)
+
+## Anchor Tests
+![Anchor Tests](./screenshot/Anchor_tests.png)
