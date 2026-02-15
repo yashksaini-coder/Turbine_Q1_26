@@ -7,6 +7,7 @@ skip-lint = false
 
 [programs.localnet]
 anchor_vault_q4_25 = "8m59MQPpQaEWtjMtnH1XKQEcSi9XhRMMBzgogVcCt2ZA"
+escrow = "3zLC7pRWazRVahNo9q5amhGsNh5XLEHtLaCHa9n5xmu2"
 
 [registry]
 url = "https://api.apr.dev"

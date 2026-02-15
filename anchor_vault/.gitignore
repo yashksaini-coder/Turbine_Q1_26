@@ -8,5 +8,6 @@ test-ledger
 .yarn
 *.log
 *-keypair.json
+programs/*/keypair.json
 id.json
 package-lock.json

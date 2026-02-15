@@ -2,6 +2,9 @@
   "license": "ISC",
   "type": "module",
   "scripts": {
+    "build": "anchor build",
+    "test": "anchor test",
+    "deploy:local": "anchor deploy --provider.cluster localnet",
     "lint:fix": "prettier */*.js \"*/**/*{.js,.ts}\" -w",
     "lint": "prettier */*.js \"*/**/*{.js,.ts}\" --check"
   },
